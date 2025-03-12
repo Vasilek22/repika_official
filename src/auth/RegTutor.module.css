@@ -1,0 +1,189 @@
+.registerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Центрируем форму вертикально */
+  }
+  
+  .registerWrapper {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 2em;
+    overflow: hidden;
+  }
+  .btnBack { 
+    cursor: pointer;
+    background-color: #303030;
+    padding: 0.6em 1.2em;
+    border-radius: 0.7em;
+    font-size: 0.85em;
+    font-weight: 550;
+  }
+  .btnBack:hover { 
+    background-color: #414141;
+  }
+  .title { 
+    text-align: center;
+    font-size: 1em;
+    font-weight: 550;
+  }
+  
+  /* Основные поля */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputLabel {
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #9b9b9b;
+  }
+  
+  .input {
+    background: transparent;
+    padding: 1em 0.9em;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1.5px solid #373737;
+    border-radius: 0.8em;
+    color: #f1f1f1;
+    transition: border-color 0.3s ease;
+  }
+  .input::placeholder {
+    color: #818181;
+  }
+  .input:focus {
+    border: 1px solid #5023a5;
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39); /* Фиолетовое свечение */  
+    outline: none;
+  }
+  
+  /* Кнопка регистрации */
+  .btnReg {
+    text-align: center;
+    border: 0;
+    background-color: #5023a5;
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39); /* Фиолетовое свечение */  
+    color: #fff;
+    font-size: 0.85em;
+    font-weight: 500;
+    border-radius: 0.8em;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btnReg:hover {
+    background-color: #5f2ac0;
+    transform: translateY(-3px);
+  }
+  
+  .btnReg:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ошибки и успех */
+  .error,
+  .success {
+    padding: 0.8em;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .error {
+    background-color: #ff4d4d;
+    color: #fff;
+  }
+  
+  .success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .agreement {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 450;
+    color: #626262;
+  }
+  
+  .agreementLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .agreementCheckbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    accent-color: #dd6916; /* Цвет галочки */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .agreementText {
+    line-height: 1.5;
+  }
+  
+  .agreementLink {
+    color: #dd6916;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .agreementLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Стиль для select */
+  .companySelect {
+    text-align: center;
+    background: transparent;
+    padding: 1em 0.9em;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1.5px solid #373737;
+    width: 100%;
+    border-radius: 0.8em;
+    color: #f1f1f1;
+    transition: border-color 0.3s ease;
+    appearance: none; /* Убирает стандартный стиль браузера */
+    -webkit-appearance: none; /* Для Safari */
+    -moz-appearance: none; /* Для Firefox */
+  }
+  
+  /* Стиль для select при фокусе */
+  .companySelect:focus {
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39); /* Фиолетовое свечение */  
+    outline: none;
+  }
+  
+  /* Стиль для стрелки выпадающего списка */
+  .companySelect::-ms-expand {
+    display: none;
+  }
+  
+  /* Стиль для темного выпадающего окна */
+  .option {
+    background-color: #333; /* Темный фон для опций */
+    color: #f1f1f1; /* Светлый текст для опций */
+  }
+  
+  .option:hover {
+    background-color: #444; /* Цвет при наведении */
+  }

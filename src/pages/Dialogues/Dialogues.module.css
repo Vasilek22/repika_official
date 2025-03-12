@@ -1,0 +1,39 @@
+.dialoguesContainer {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .chatListContainer {
+    width: 300px; /* Ширина списка чатов */
+    background-color: #1a1a1a;
+    padding: 20px;
+    overflow-y: auto;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chatRoomContainer {
+    flex-grow: 1;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .chatRoomTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .chatListItem {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chatListItem:hover {
+    background-color: #444;
+  }
+  

@@ -1,0 +1,275 @@
+.profile {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+.up { 
+    position: relative;
+    text-align: center;
+}
+.background {
+    position: relative;
+    width: 100%;
+    height: 14em;
+    object-fit: cover;
+    border-radius: 1.5em;
+}
+.contacts { 
+    position: absolute;
+    bottom: 0.7em;
+    left: 0.5em;
+    color: white;
+    background-color: #000000b9;
+    backdrop-filter: blur(4px);
+    border-radius: 1.5em;
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+.contactLink { 
+    cursor: pointer;
+    width: 2em;
+}
+.editBtn { 
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    border-radius: 1.5em;
+    background-color: #000000b9;
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 1em;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+.editBtn:hover { 
+    background-color: #3f3f3fb4;
+}
+.avatar {
+    position: absolute;
+    left: 50%;
+    bottom: -2.5em; 
+    transform: translateX(-50%);
+    border: 4px solid #26262f;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.name { 
+    position: relative;
+    margin-top: 2.9em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+.name::after {
+    cursor: pointer;
+    content: ""; /* Убираем текст */
+    position: absolute;
+    margin-left: 0.5em; /* Отступ от текста */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%); /* Центрируем вертикально */
+    width: 16px; /* Ширина изображения */
+    height: 16px; /* Высота изображения */
+    background-image: url('./img/Check.svg'); /* Указываем путь к изображению */
+    background-color: #484852;
+    border-radius: 50%;
+    padding: 0.2em;
+    background-size: cover; /* Заполняем весь элемент изображением */
+    background-position: center; /* Центрируем изображение */
+}
+.editForm { 
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1.6em;
+}
+.label {
+    color: rgb(153, 153, 153);
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+.descriptionInput, .surnameInput, .nameInput, .backgroundInput { 
+    color: white;
+    font-size: 0.8em;
+    padding: 0.8em 1em;
+    font-weight: 500;
+    border-radius: 1em;
+    border: 2px solid #3b3b41;
+    width: 100%;
+}
+.saveBtn { 
+    margin-top: 0.6em;
+    cursor: pointer;
+    background-color: #3b3b41;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 0.9em 1em;
+    border-radius: 1em;
+    text-align: center;
+    color: white;
+    transition: background-color .2s ease-in-out;
+}
+.saveBtn:hover { 
+    background-color: #55555e;
+}
+.desc { 
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 550;
+    color: rgb(182, 182, 182);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: #252529;
+    border: 1px solid #424249;
+    border-radius: 1.5em;
+    color: white;
+    text-align: center;
+    margin-top: 0.9em;
+}
+
+.statItem {
+    flex: 1;
+    padding: 0.9em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    border-right: 1px solid #424249;
+}
+
+.statItem:last-child {
+    border-right: none;
+}
+
+.statTitle {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.statValue {
+    font-size: 1em;
+    font-weight: 650;
+    color: #fff;
+}
+
+.devNote { 
+    font-size: 1.2em;
+    font-weight: 450;
+    color: rgb(207, 207, 207);
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Общие стили */
+    .profile {
+      padding: 1em;
+    }
+  
+    /* Упрощаем вид фона */
+    .background {
+      height: 10em; /* Меньше высота для мобильных устройств */
+      border-radius: 1.2em;
+    }
+  
+    /* Контакты */
+    .contacts {
+      bottom: 1em; /* Увеличим отступ снизу */
+      left: 0.5em;
+      padding: 0.5em;
+      font-size: 0.9em; /* Уменьшаем размер шрифта */
+      flex-direction: column; /* Контакты будут располагаться вертикально */
+      gap: 0.5em;
+    }
+  
+    /* Кнопка редактирования */
+    .editBtn {
+      bottom: 9.5em; /* Кнопка будет выше */
+      right: 0.5em;
+      font-size: 0.8em; /* Меньше размер шрифта */
+      padding: 0.8em;
+    }
+  
+    /* Аватар */
+    .avatar {
+      width: 5em; /* Меньший размер */
+      height: 5em;
+      bottom: -3em; /* Больше отступ снизу */
+    }
+  
+    /* Имя */
+    .name {
+      font-size: 1em; /* Размер шрифта чуть меньше */
+      margin-top: 3.5em; /* Больше отступ сверху */
+    }
+  
+    .name::after {
+      width: 12px; /* Меньший размер иконки */
+      height: 12px;
+    }
+  
+    /* Форма редактирования */
+    .editForm {
+      width: 80%; /* Ширина формы будет больше */
+      margin-top: 1em;
+    }
+  
+    .label {
+      font-size: 0.7em; /* Уменьшаем размер шрифта */
+    }
+  
+    .descriptionInput,
+    .surnameInput,
+    .nameInput,
+    .backgroundInput {
+      font-size: 0.75em; /* Меньше размер шрифта */
+      padding: 0.7em 1em; /* Уменьшаем отступы */
+    }
+  
+    .saveBtn {
+      padding: 0.8em 1.2em; /* Меньше padding */
+      font-size: 0.75em;
+    }
+  
+    .desc {
+      font-size: 0.8em; /* Меньше размер шрифта */
+    }
+  
+    /* Статистика */
+    .stats {
+      flex-direction: column; /* Статистика будет отображаться вертикально */
+      gap: 1em;
+    }
+  
+    .statItem {
+      padding: 1em;
+      border-right: none; /* Убираем правые границы */
+    }
+  
+    .statTitle {
+      font-size: 0.7em; /* Меньше размер шрифта */
+    }
+  
+    .statValue {
+      font-size: 0.9em; /* Уменьшаем размер */
+    }
+  
+    /* Примечания разработчика */
+    .devNote {
+      font-size: 1em; /* Уменьшаем размер */
+    }
+  }
+  

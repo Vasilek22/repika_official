@@ -1,0 +1,43 @@
+      <form onSubmit={handleSubmit} className={s.filterForm}>
+        <div className={s.filtersRow}>
+          <div className={s.filterField}>
+            <label htmlFor="price">Цена</label>
+            <select name="price" value={filters.price} onChange={handleFilterChange}>
+              <option value="all">Все</option>
+              <option value="cheap">Дешевые</option>
+              <option value="medium">Средние</option>
+              <option value="expensive">Дорогие</option>
+            </select>
+          </div>
+
+          <div className={s.filterField}>
+            <label htmlFor="priceRange">Диапазон цены</label>
+            <div className={s.filterFieldInputs}>
+              <input
+                type="number"
+                name="minPrice"
+                value={filters.priceRange.min}
+                onChange={(e) => setFilters({ ...filters, priceRange: { ...filters.priceRange, min: e.target.value } })}
+                placeholder="От 10 ₽"
+              />
+              <input
+                type="number"
+                name="maxPrice"
+                value={filters.priceRange.max}
+                onChange={(e) => setFilters({ ...filters, priceRange: { ...filters.priceRange, max: e.target.value } })}
+                placeholder="До 100.000 ₽"
+              />
+            </div>
+          </div>
+
+          <div className={s.filterField}>
+            <label htmlFor="exam">Экзамен</label>
+            <select name="exam" value={filters.exam} onChange={handleFilterChange}>
+              <option value="">Все</option>
+              <option value="ЕГЭ">ЕГЭ</option>
+              <option value="ОГЭ">ОГЭ</option>
+            </select>
+          </div>
+
+        </div>
+      </form>

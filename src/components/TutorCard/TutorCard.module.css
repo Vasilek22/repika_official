@@ -1,0 +1,496 @@
+.courseCard { 
+    width: 330px; /* Фиксированная ширина для всех карточек */
+    height: 450px; /* Фиксированная высота для всех карточек */
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5em;
+    overflow: auto; /* Включаем прокрутку */
+    position: relative;
+}
+
+
+.courseCardUp {
+    position: relative;
+    background-color: #141419;
+    border: 1px solid #25253134;
+    border-radius: 1.5em;
+    padding: 1em;
+    margin-bottom: 0.15em;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-grow: 0; /* Убираем лишний рост */
+}
+
+.courseCardAvatar { 
+    width: 4.3em;
+    height: 4.3em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.courseCardDesc {
+    background-color: #141419;
+    border: 1px solid #25253134;
+    border-radius: 1.5em 1.5em 0 0;
+    padding: 1.4em;
+    flex-grow: 1; /* Позволяет карточке заполнять пространство */
+    overflow-y: auto; /* Если контент не помещается, появляется прокрутка */
+}
+
+/* Тонкий темный ползунок для .courseCardDesc */
+.courseCardDesc::-webkit-scrollbar {
+    width: 6px; /* Узкая полоса прокрутки */
+}
+
+.courseCardDesc::-webkit-scrollbar-thumb {
+    background-color: #444; /* Цвет ползунка */
+    border-radius: 10px;
+    border: 2px solid #222; /* Тонкая граница вокруг ползунка */
+}
+
+.courseCardDesc::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Цвет при наведении */
+}
+.courseTitle { 
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.courseInfo { 
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    flex-grow: 1; /* Размещение информации на всей оставшейся части */
+}
+
+.courseInstructor { 
+    font-size: 0.9em;
+    font-weight: 600;
+    color: white;
+}
+
+.courseExperience, .courseEducation, .courseRating { 
+    font-size: 0.8em;
+    font-weight: 550;
+    color: rgb(167, 167, 167);
+}
+
+.courseDescription {
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: 550;
+    color: #b6b6b6;
+    margin-top: 0.4em;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Обрезаем описание, если оно длинное */
+    margin-bottom: 1.5em;
+}
+
+.coursePrice {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #e74c3c;
+    margin-bottom: 1.5em;
+}
+
+.enrollBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 0.85em;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enrollBtn:hover {
+    background-color: #2980b9;
+}
+
+.btnBuy {  
+    background-color: #5023a5;
+    padding: 0.95em 1em;
+    border-radius: 0 0 12px 12px;
+    font-size: 0.85em;
+    font-weight: 550;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39);
+    transition:  background-color 0.2s ease-in-out;
+}
+.btnBuy:hover { 
+    background-color: #5f2ac2;
+}
+
+.subjectList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    margin-bottom: 1em;
+}
+
+.subjectItem {
+    gap: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em 1em;
+    border-radius: 10px;
+    background-color: #252531;
+    color: #ececec;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.subjectExamType { 
+    position: absolute;
+    right: -0.8em;
+    top: -0.7em;
+    background-color: #5f2ac2;
+    padding: 0.2em 0.4em;
+    border-radius: 0.4em;
+    font-size: 0.85em;
+    font-weight: 550;
+}
+.subjectName {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #ffffff;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subjectDetails {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #b4b4b4;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.noSubjects {
+    color: #e74c3c;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 0.5em;
+}
+
+
+
+/* Стили для блока расписания */
+.titleSchedule {
+    font-size: 0.85em;
+    font-weight: 450;
+    color: #a5a5a5;
+    margin-bottom: 0.3em;
+}
+
+.scheduleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.scheduleItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em 1em;
+    border-radius: 10px;
+    background-color: #252531;
+    color: #ececec;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.scheduleItem:hover {
+    background-color: #2c2c3a;
+    cursor: pointer;
+}
+
+.scheduleDay {
+    font-weight: 500;
+    font-size: 0.85em;
+    color: #fff;
+}
+
+.scheduleTime {
+    color: #a8a8a8;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* TutorCard.module.css */
+
+/* Модальное окно */
+.modal {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Тёмный полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px); /* Размытие фона за модальным окном */
+    -webkit-backdrop-filter: blur(3px); /* Для поддержки в Safari */
+  }
+  
+  
+  .modalContent {
+    position: relative;
+    background-color: #22222b;
+    border: 1px solid #2a2a3856;
+    border-radius: 1.5em;
+    padding: 2em;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+  .modalContentTitle { 
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+
+/************************************************************************************/
+  @media (max-width: 768px) {
+    .courseCard { 
+        width: 100%; /* Адаптивная ширина */
+        height: auto; /* Автоматическая высота */
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5em;
+        overflow: auto;
+        position: relative;
+        margin: 0 0.7em;
+    }
+
+    .courseCardUp {
+        position: relative;
+        background-color: #141419;
+        border: 1px solid #25253134;
+        border-radius: 1.5em;
+        padding: 1em;
+        margin-bottom: 0.15em;
+        display: flex;
+        align-items: center;
+        gap: 0.6em;
+        flex-grow: 0;
+    }
+
+    .courseCardAvatar { 
+        width: 3.5em; /* Уменьшение размера аватара */
+        height: 3.5em;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .courseCardDesc {
+        background-color: #141419;
+        border: 1px solid #25253134;
+        border-radius: 1.5em 1.5em 0 0;
+        padding: 1.4em;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .courseCardDesc::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .courseCardDesc::-webkit-scrollbar-thumb {
+        background-color: #444;
+        border-radius: 10px;
+        border: 2px solid #222;
+    }
+
+    .courseCardDesc::-webkit-scrollbar-thumb:hover {
+        background-color: #666;
+    }
+
+    .courseTitle { 
+        font-size: 0.9em; /* Увеличение шрифта для улучшения читаемости */
+        font-weight: 550;
+        text-align: center;
+    }
+
+    .courseInfo { 
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+        flex-grow: 1;
+    }
+
+    .courseInstructor { 
+        font-size: 0.85em;
+        font-weight: 600;
+        color: white;
+    }
+
+    .courseExperience, .courseEducation, .courseRating { 
+        font-size: 0.75em;
+        font-weight: 500;
+        color: rgb(167, 167, 167);
+    }
+
+    .courseDescription {
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 500;
+        color: #b6b6b6;
+        margin-top: 0.4em;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 1em; /* Уменьшено пространство снизу */
+    }
+
+    .coursePrice {
+        font-size: 1.2em; /* Увеличение шрифта для цены */
+        font-weight: 600;
+        color: #e74c3c;
+        margin-bottom: 1em; /* Уменьшено пространство снизу */
+    }
+
+    .enrollBtn {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        font-size: 0.9em; /* Немного увеличен шрифт */
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .enrollBtn:hover {
+        background-color: #2980b9;
+    }
+
+    .btnBuy {  
+        background-color: #5023a5;
+        padding: 1.2em 1em;
+        border-radius: 0 0 12px 12px;
+        font-size: 0.8em; /* Увеличение шрифта */
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+        box-shadow: 0 0 15px rgba(80, 35, 165, 0.39);
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .btnBuy:hover { 
+        background-color: #5f2ac2;
+    }
+
+    .subjectList {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        margin-bottom: 1em;
+    }
+
+    .subjectItem {
+        gap: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6em 1em;
+        border-radius: 10px;
+        background-color: #252531;
+        color: #ececec;
+        transition: background-color 0.3s ease;
+        position: relative;
+    }
+
+    .subjectExamType { 
+        position: absolute;
+        right: -0.8em;
+        top: -0.7em;
+        background-color: #5f2ac2;
+        padding: 0.2em 0.4em;
+        border-radius: 0.4em;
+        font-size: 0.75em;
+        font-weight: 500;
+    }
+
+    .subjectName, .scheduleDay {
+        font-size: 0.8em; /* Увеличение шрифта */
+        font-weight: 500;
+        color: #ffffff;
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .subjectDetails, .scheduleTime {
+        font-size: 0.75em; /* Увеличение шрифта */
+        font-weight: 600;
+        color: #b4b4b4;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .noSubjects {
+        color: #e74c3c;
+        font-size: 1em; /* Увеличение шрифта */
+        font-weight: 600;
+        margin-top: 0.5em;
+    }
+
+    /* Стили для блока расписания */
+    .titleSchedule {
+        font-size: 0.8em; /* Увеличение шрифта */
+        font-weight: 400;
+        color: #9c9c9c;
+        margin-bottom: 0.3em;
+    }
+
+    .scheduleContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+    .scheduleItem {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6em 1em;
+        border-radius: 10px;
+        background-color: #252531;
+        color: #ececec;
+        font-size: 1em;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .scheduleItem:hover {
+        background-color: #2c2c3a;
+        cursor: pointer;
+    }
+}

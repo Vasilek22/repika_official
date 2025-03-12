@@ -1,0 +1,167 @@
+.tutorsContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.tutorsList { 
+    display: flex;
+    justify-content: center;
+}
+  
+  .filterForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .filtersRow {
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .filterField {
+    display: flex;
+    flex-direction: column;
+  }
+  .filterFieldInputs { 
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+  .filterField label {
+    margin-bottom: 5px;
+    font-size: 0.75em;
+    font-weight: 550;
+    color: rgb(194, 194, 194);
+  }
+  
+  .filterField input,
+  .filterField select {
+    width: 130px;
+    text-align: center;
+    padding: 0.6em 1em;
+    font-size: 0.85em;
+    font-weight: 550;
+    background-color: #141419;
+    border: 1px solid #25253134;
+    border-radius: 0.7em;
+  }
+  .filterField input::placeholder { 
+    color: rgb(161, 161, 161);
+    font-size: 0.9em;
+    font-weight: 550;
+  }
+  
+  .searchBtn {
+    background-color: #5023a5;
+    padding: 0.75em 1.8em;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: 550;
+    text-align: center;
+    cursor: pointer;
+    color: #fff; /* Сделает текст читабельным */
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39); /* Фиолетовое свечение */
+    transition:  background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #622bc7;
+  }
+  
+  .tutorsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+
+  /* Основной контент */
+.content {
+  flex: 1;
+  margin-bottom: 1em;
+}
+.subjectsContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.subjectCard {
+  user-select: none;
+  height: 75px;
+  background-color: #252529;
+  border: 1px solid #6e6e79;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  flex-grow: 1;
+  transition: transform .25s ease-in-out, border .25s ease-in-out;
+}
+.subjectCard:hover { 
+  transform: translateY(-2px);
+  border: 1px solid #ababc7;
+}
+.active {
+  background-color: #41414b;
+}
+/* Карточки первой строки (6 штук) */
+.subjectCard:nth-child(-n+6) {
+  flex-basis: calc(100% / 6 - 10px);
+}
+
+/* Карточки второй строки (5 штук) */
+.subjectCard:nth-child(n+7) {
+  flex-basis: calc(100% / 5 - 10px);
+}
+
+
+.subjectCard p {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.subjectCard img {
+  width: 35px;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .subjectsContainer {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .subjectCard {
+    flex-basis: calc(25% - 5px); /* 4 карточки в строке */
+    height: 60px; /* Сделал ниже */
+    padding: 0.6em;
+  }
+
+  .subjectCard p {
+    font-size: 0.6em; /* Уменьшил текст */
+    top: 8px;
+    left: 8px;
+  }
+
+  .subjectCard img {
+    width: 20px; /* Уменьшил картинку */
+    bottom: 7px;
+    right: 7px;
+  }
+}

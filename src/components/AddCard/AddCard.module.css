@@ -1,0 +1,153 @@
+/* Центрируем форму */
+.formContainer {
+  max-width: 600px;
+  padding: 1em;
+  border: 1px solid #25253134;
+  border-radius: 1.5em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+}
+
+/* Заголовок */
+.formContainerTitle {
+  font-size: 1em;
+  font-weight: 550;
+  color: #ececec;
+  text-align: center;
+}
+
+/* Стили для полей */
+.form label {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #afafaf;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  padding: 0.9em;
+  border: 1px solid #29293565;
+  border-radius: 10px;
+  background-color: #141419;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 550;
+  margin-bottom: 1em;
+}
+
+.form input::placeholder, .form textarea::placeholder { 
+  font-size: 0.9em;
+  color: rgb(141, 141, 141);
+}
+
+/* Кнопка */
+.form button {
+  background-color: #5023a5;
+  padding: 0.9em;
+  border-radius: 10px;
+  font-size: 0.85em;
+  font-weight: 550;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(80, 35, 165, 0.5);
+  border: none;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 1em;
+}
+
+.form button:hover {
+  background-color: #5f2ac2;
+}
+
+/* Стилизация блоков предметов */
+.subjectItem {
+  background-color: #303036;
+  padding: 1.2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  gap: 0.8em;
+}
+
+.subjectItem input {
+  margin-bottom: 1em;
+}
+
+/* Стилизация рабочего графика */
+.scheduleWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.scheduleItem {
+  flex: 1;
+  background-color: #303036;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.dayButton {
+  background-color: #5023a5;
+  color: white;
+  padding: 0.8em;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.scheduleInputs input {
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+/* Кнопка удаления */
+.deleteSubject {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 0.4em 0.6em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.deleteSubject:hover {
+  background-color: #c0392b;
+}
+
+/* Стилизация select */
+.form select {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid #29293565;
+  border-radius: 10px;
+  background-color: #141419;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  appearance: none;
+  cursor: pointer;
+}
+.titleBlock { 
+  font-size: 0.9em;
+  font-weight: 550;
+  margin-bottom: 0.5em;
+}
+.connection{ 
+  margin-top: 1em;
+}

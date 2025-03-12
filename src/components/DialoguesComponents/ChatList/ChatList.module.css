@@ -1,0 +1,46 @@
+.chatListContainer {
+    width: 100%;
+    padding: 20px;
+    background-color: #1a1a1a; /* Темный фон для контейнера */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    color: #fff; /* Белый текст */
+  }
+  
+  .chatListTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* Светлый текст для заголовка */
+  }
+  
+  .chatItem {
+    padding: 15px;
+    background-color: #333; /* Темные карточки для чатов */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatItem:hover {
+    background-color: #444; /* Легкое осветление при наведении */
+  }
+  
+  .chatName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Белый цвет для имени чата */
+  }
+  
+  .chatLastMessage {
+    font-size: 14px;
+    color: #bbb; /* Светло-серый цвет для последнего сообщения */
+  }
+  
+  .chatDate {
+    font-size: 12px;
+    color: #888; /* Светло-серый для даты */
+    text-align: right;
+  }
+  

@@ -1,0 +1,115 @@
+.header {
+  border-radius: 1em;
+  display: flex;
+  margin-bottom: 0.3em;
+  padding: 10px 30px; /* Добавляем отступы внутри */
+  background-color: #252529;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-sizing: border-box; /* Чтобы padding и border не выходили за пределы контейнера */
+  justify-content: space-between; /* Распределяем элементы по краям */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+}
+
+.logo {
+  font-size: 1em; /* Размер шрифта */
+  font-weight: bold; /* Жирное начертание */
+  color: #ffffff; /* Белый цвет */
+  text-transform: uppercase; /* Заглавные буквы */
+  letter-spacing: 2px; /* Расстояние между буквами */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Курсор в виде руки */
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавные анимации для цветов и трансформации */
+}
+
+.logo p {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Можно использовать свой шрифт */
+}
+
+.logo:hover {
+  color: #28a745; /* Зеленый цвет при наведении */
+  transform: scale(1.1); /* Увеличение логотипа при наведении */
+}
+
+.logo:active {
+  transform: scale(0.95); /* Немного уменьшать логотип при клике */
+}
+
+
+.userCount {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-right: 0.5em;
+}
+
+.donateButton .donateBtn {
+  padding: 0.7em;
+  border-radius: 0.7em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #5023a5;  
+  box-shadow: 0 0 15px rgba(80, 35, 165, 0.233);  
+  font-size: 0.8em;
+  font-weight: 550;
+}
+
+.donateButton .donateBtn:hover {
+  background-color: #218838;
+}
+
+
+/* Модальное окно */
+.modal {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Тёмный полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px); /* Размытие фона за модальным окном */
+    -webkit-backdrop-filter: blur(3px); /* Для поддержки в Safari */
+  }
+  
+  
+  .modalContent {
+    position: relative;
+    background-color: #22222b;
+    border: 1px solid #2a2a3856;
+    border-radius: 1.5em;
+    padding: 2em;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+  .modalContentTitle { 
+    font-size: 1em;
+    font-weight: 500;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+.closeButton:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px; /* Добавляем отступы внутри */
+  }
+}

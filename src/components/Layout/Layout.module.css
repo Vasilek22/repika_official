@@ -1,0 +1,67 @@
+/* Layout.module.css */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Высота на весь экран */
+  padding: 1em 0;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1; /* Заполняет оставшееся пространство */
+  overflow: hidden; /* Прячем все, что выходит за пределы */
+}
+
+.content {
+  border-radius: 1em;
+  flex: 1; /* Занимает оставшееся пространство */
+  overflow-y: auto; /* Скролл по вертикали */
+  background-color: #252529;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  max-height: calc(100vh - 2em); /* Высота блока с учетом padding (если есть) */
+}
+
+/* Кастомизация скроллбара */
+.scrollbar {
+  scrollbar-width: thin; /* Тонкий скролл для Firefox */
+  scrollbar-color: #3d3d3d #1f1f1f; /* Цвет скроллбара и его фона для Firefox */
+}
+
+/* Для Webkit-браузеров (Chrome, Safari) */
+.content::-webkit-scrollbar {
+  width: 8px; /* Ширина скроллбара */
+}
+
+.content::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Цвет фона трека */
+  border-radius: 8px; /* Скругленные углы у трека */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #333; /* Цвет скроллбара */
+  border-radius: 8px; /* Скругленные углы у скроллбара */
+}
+
+/* Стиль для мобильных версий */
+@media (max-width: 768px) {
+  .layout {
+    padding: 0.5em; /* Меньше отступов на мобильных */
+  }
+
+  .mainContent {
+    flex-direction: column; /* Столбец вместо строки */
+    height: 100%; /* Задаем полную высоту для контейнера */
+  }
+
+  .content {
+    max-height: calc(100vh - 50px); /* Убираем верхний отступ для контента */
+    overflow-y: scroll; /* Убираем ограничение по высоте и добавляем прокрутку */
+    margin-bottom: 6.4em;
+  }
+
+  .menu {
+    position: static; /* Меню не фиксируется, занимает нормальное место */
+    width: 100%; /* Меню на всю ширину экрана */
+    height: auto; /* Высота меню адаптируется */
+  }
+}

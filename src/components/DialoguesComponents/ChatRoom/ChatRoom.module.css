@@ -1,0 +1,76 @@
+.chatRoomContainer {
+    width: 100%;
+    height: 80vh;
+    background-color: #1a1a1a; /* Темный фон для комнаты */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .chatMessages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .message {
+    background-color: #333; /* Темные сообщения */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .messageUser {
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  
+  .messageText {
+    margin-top: 5px;
+    color: #ccc;
+  }
+  
+  .messageTime {
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+  }
+  
+  .chatInputContainer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 8px;
+  }
+  
+  .chatInput {
+    width: 85%;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .chatSendButton {
+    width: 10%;
+    background-color: #666;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatSendButton:hover {
+    background-color: #888;
+  }
+  

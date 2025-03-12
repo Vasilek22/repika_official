@@ -1,0 +1,131 @@
+/* ManageCards.module.css */
+.container {
+    padding: 20px;
+    color: white;
+}
+
+.editForm {
+    padding: 20px;
+    background-color: #1f1f27;
+    border-radius: 1em;
+    margin-bottom: 20px;
+    border: 1px solid #252531;
+}
+
+.editFormTitle {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input,
+.textarea {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #353545;
+    background-color: #252531;
+    color: white;
+}
+
+.textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addButton { 
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.7em;
+    background-color: #5023a5;
+    border-radius: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+.submitButton,
+.cancelButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.submitButton:hover,
+.cancelButton:hover {
+    background-color: #45a049;
+}
+
+.cardList {
+    margin-top: 20px;
+}
+
+.cardListTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.noCardsMessage {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.card {
+    padding: 15px;
+    background-color: #252531;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #353545;
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cardDescription {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.cardContact {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.editButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editButton:hover {
+    background-color: #45a049;
+}
+
+
+.cardStatus { 
+    margin-top: 1em;
+}

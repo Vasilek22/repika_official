@@ -1,0 +1,245 @@
+/* Левое меню */
+.sidebar {
+  width: 220px;
+  color: white;
+  margin-right: 0.3em;
+}
+
+.registrationBlock {
+  border-radius: 1em;
+  overflow-y: auto;
+  background-color: #252529;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  gap: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+.registrationBlock p { 
+  font-size: 0.95em;
+  font-weight: 550;
+  text-align: center;
+}
+
+.navLink {
+  border-radius: 0.8em;
+  text-decoration: none;
+  display: block;
+  background-color: #5023a5;  
+  box-shadow: 0 0 15px rgba(80, 35, 165, 0.39);  
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 0.7em;
+}
+
+.navLink:hover {
+  background-color: #5d29bd;  
+  transform: translateY(-3px); 
+}
+
+.linkText {
+  font-size: 0.85em;
+  font-weight: 650;
+}
+
+.navLink:active {
+  transform: translateY(1px); 
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  background-color: #252529;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  padding: 0.5em;
+  gap: 0.5em;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 0.4em 1.3em;
+  border-radius: 0.7em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menuItem:hover {
+  background-color: #474755;
+}
+
+.menuIcon svg {
+  width: 27px;
+  margin-right: 0.8em;
+}
+
+.menuIcon svg path {
+  stroke: #b8b8cc;
+  stroke-width: 1.6;
+}
+
+.menuText {
+  font-size: 0.89em;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.btnAddCard, .logoutButtonBlock, .btnGoals { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7em;
+  border-radius: 0.7em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #5023a5;  
+  box-shadow: 0 0 15px rgba(80, 35, 165, 0.233);  
+  margin-top: 0.3em;
+}
+
+.btnAddCard:hover {
+  background-color: #5f29c4;  
+}
+
+.logoutButtonText, .btnAddCardText, .btnGoalsText {
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+.logoutButtonBlock:hover {
+  background-color: #6331c2;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #19191b;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 0.5em 15px;
+  }
+
+  .burgerMenu {
+    display: flex;
+  }
+
+  .sidebarOpen {
+    width: 250px; 
+  }
+
+  .menuListOpen {
+    display: block;
+  }
+
+  .logo { 
+    display: none;
+  }
+
+  .logoText { 
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .registrationBlock {
+    margin-top: 0;
+    border-radius: 1em;
+    overflow-y: visible;
+    background-color: #252529;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    display: flex;
+    flex-direction: column; /* Обновлено на column, чтобы элементы располагались вертикально */
+    padding: 0.5em;
+    gap: 0.3em;
+  }
+
+  .registrationBlock p { 
+    display: block;
+    font-size: 0.85em;
+    font-weight: 550;
+    text-align: center;
+  }
+
+  .navLink {
+    border-radius: 0.8em;
+    text-decoration: none;
+    display: block;
+    background-color: #5023a5;  
+    box-shadow: 0 0 15px rgba(80, 35, 165, 0.39);  
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 0.7em;
+  }
+
+  .navLink:hover {
+    background-color: #5d29bd;  
+    transform: translateY(-3px);
+  }
+
+  .linkText {
+    font-size: 0.8em;
+    font-weight: 550;
+  }
+
+  .menuList {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Обновлено на row, чтобы меню было в строку */
+    margin-top: 0;
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
+    border-radius: 1em;
+    padding: 0;
+    gap: 0;
+  }
+
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0.4em 1.3em;
+    border-radius: 0.7em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .logoutButtonText, .btnAddCardText, .btnGoalsText {
+    font-size: 0.7em;
+    font-weight: 550;
+  }
+
+  .menuIcon svg {
+    width: 20px;
+    margin-right: 0;
+  }
+
+  .menuText {
+    font-size: 0.65em;
+  }
+
+  .mobileContainer { 
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btnAddCard, .logoutButtonBlock, .btnGoals {
+    width: auto; /* Каждая кнопка занимает почти половину ширины */
+    display: inline-flex;
+    margin-top: 0.3em;
+    padding: 0.7em 1.1em;
+  }
+
+  .donationCard {
+    display: none;
+  }
+}

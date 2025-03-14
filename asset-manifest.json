@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/repika_official/static/css/main.fe4ab963.css",
+    "main.js": "/repika_official/static/js/main.8587be31.js",
+    "static/media/icons8-телеграм-750.png": "/repika_official/static/media/icons8-телеграм-750.3f6829da9d6a17c825f5.png",
+    "static/media/icons8-vk-750.png": "/repika_official/static/media/icons8-vk-750.56aa62a350f62284f6a2.png",
+    "static/media/back.jpg": "/repika_official/static/media/back.fc319e7fd3f96bb3e955.jpg",
+    "static/media/back.png": "/repika_official/static/media/back.f5707d3944ba6bf0b3b0.png",
+    "static/media/avatar.jpg": "/repika_official/static/media/avatar.2b65a834d8b12d41db3a.jpg",
+    "static/media/biology.png": "/repika_official/static/media/biology.bea0b3be0cf46472344f.png",
+    "static/media/english.png": "/repika_official/static/media/english.789ff1da7dc0b7ff0220.png",
+    "static/media/chemistry.png": "/repika_official/static/media/chemistry.b612be581eff4d4a2759.png",
+    "static/media/geography.png": "/repika_official/static/media/geography.ffa1511bea7e136207a8.png",
+    "static/media/social.png": "/repika_official/static/media/social.8cfa15b6d74a2df3fd34.png",
+    "static/media/history.png": "/repika_official/static/media/history.dd8ecea4b8c39a5cdf45.png",
+    "static/media/physics.png": "/repika_official/static/media/physics.410b38a834fce3af449d.png",
+    "static/media/math.png": "/repika_official/static/media/math.1732771baf98d70e07f0.png",
+    "static/media/literature.png": "/repika_official/static/media/literature.c1fd5f46ad1b9e7820a3.png",
+    "static/media/informatics.png": "/repika_official/static/media/informatics.b94d6fe6732808ce31cf.png",
+    "index.html": "/repika_official/index.html",
+    "static/media/Check.svg": "/repika_official/static/media/Check.92c46d245b534dad51c0.svg",
+    "main.fe4ab963.css.map": "/repika_official/static/css/main.fe4ab963.css.map",
+    "main.8587be31.js.map": "/repika_official/static/js/main.8587be31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe4ab963.css",
+    "static/js/main.8587be31.js"
+  ]
+}
